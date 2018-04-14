@@ -64,3 +64,12 @@ for tag, *args in records:
         do_foo(*args)
     elif tag == 'bar':
         do_bar(*args)
+
+"""
+Star unpacking can also be useful when combined with certain kinds of string processing
+operations, such as splitting. For example:
+"""
+
+line = 'nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false'
+uname, *fields, homedir, sh = line.split(':')
+print(uname, fields, homedir, sh)
