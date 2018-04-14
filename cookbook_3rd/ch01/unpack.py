@@ -36,3 +36,8 @@ def drop_first_last(grades):
 
 grades = [1, 2, 3, 4, 5, 6]
 print(drop_first_last(grades))
+
+# case 2
+record = ('Dave', 'dave@example.com', '773-555-1212', '847-555-1212')
+name, email, *phone_numbers = record
+print(name, email, phone_numbers)
