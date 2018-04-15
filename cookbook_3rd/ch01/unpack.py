@@ -72,4 +72,8 @@ operations, such as splitting. For example:
 
 line = 'nobody:*:-2:-2:Unprivileged User:/var/empty:/usr/bin/false'
 uname, *fields, homedir, sh = line.split(':')
-print(uname, fields, homedir, sh)
+print(uname, fields, homedir, sh, __name__)
+
+url = input('Please enter the URL:')
+domain = url[11:-4]
+print("Domain name: " + domain)
