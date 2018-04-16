@@ -21,3 +21,14 @@ If you use repr, however, you will generally get a
 representation of the value as a legal Python expression.
 """
 print(repr("Hello,\nworld!"))
+
+# Long string example
+print('''Underneath the downhill breezes a mistake. 
+The cloth graces the historical bastard past a warehouse. 
+Will the questionable device swing? Why can't the taxpayer cruise? Each romantic sin persists within the stare. 
+A century pumps beneath an example!''')
+
+print("""Underneath the downhill breezes a mistake. 
+The cloth graces the historical bastard past a warehouse. 
+Will the questionable device swing? Why can't the taxpayer cruise? Each romantic sin persists within the stare. 
+A century pumps beneath an example!""")
