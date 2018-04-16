@@ -18,4 +18,7 @@ print("scikit-learn version: %s" % sklearn.__version__)
 from sklearn.datasets import load_iris
 
 iris = load_iris()
-print(iris)
+print(iris['data'].shape)
+# print(len(iris['data']))
+# print(iris.keys())
+# print(iris['DESCR'][:2000])
