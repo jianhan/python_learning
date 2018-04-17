@@ -37,3 +37,9 @@ print(numbers[0:10:-2])
 print(numbers[::-2])
 print(numbers[5::-2])
 print(numbers[:5:-2])
+
+# concat
+print([1, 2, 3] + [4, 5, 6])
+
+# multiplication
+print([1, 2, 3] * 5)
