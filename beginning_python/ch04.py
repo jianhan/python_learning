@@ -23,3 +23,7 @@ template = '''<html>
 </body>'''
 data = {'title': 'My Home Page', 'text': 'Welcome to my home page!'}
 print(template.format_map(data))
+
+# items
+d = {'title': 'Python Web Site', 'url': 'http://www.python.org', 'spam': 0}
+print(d.items())
