@@ -13,3 +13,11 @@ print(x, y)
 scoundrel = {'name': 'Robin', 'girlfriend': 'Marion'}
 key, value = scoundrel.popitem()
 print(key, value)
+
+# zip
+
+names = ['anne', 'beth', 'george', 'damon']
+ages = [12, 45, 32, 102]
+
+for name, age in zip(names, ages):
+    print(name, 'is', age, 'years old')
