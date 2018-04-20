@@ -84,3 +84,10 @@ print(n is names, n == names, n)
 
 x = names[:]
 print(x is names, x == names, x)
+
+
+def hello(name="Hello", value="world"):
+    print('{}, {} !'.format(name, value))
+
+
+hello("Hello", "World")
