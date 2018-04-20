@@ -60,3 +60,15 @@ y[1] = "Python"
 print(x)
 del x
 print(y)
+
+# reference number
+x = 1
+y = x
+y = 2
+print(x)
+
+# reference list. Notice this case, the change of Y will result the change of X because y changes the value of list
+x = [1, 2, 3]
+y = x
+y[0] = 100
+print(x)
