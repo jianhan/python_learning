@@ -52,3 +52,11 @@ letterGirls = {}
 for girl in girls:
     letterGirls.setdefault(girl[0], []).append(girl)
 print([b + '+' + g for b in boys for g in letterGirls[b[0]]])
+
+# delete
+x = ["Hello", "world"]
+y = x
+y[1] = "Python"
+print(x)
+del x
+print(y)
