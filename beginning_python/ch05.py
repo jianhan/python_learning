@@ -125,9 +125,17 @@ my_hello(world="HHH", hello="WWWW")
 
 
 # collection in the middle, must called by name
-
 def in_the_middle(x, *y, z):
     print(x, y, z)
 
 
 in_the_middle("Test", 1, 2, 3, 4, 5, z="testz")
+
+
+# double start returns a dictionary
+def return_dictionary(**params):
+    print(params)
+
+
+# must pass key value like following
+return_dictionary(x=1, y=2, z=3)
