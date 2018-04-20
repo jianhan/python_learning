@@ -122,3 +122,12 @@ def my_hello(hello, world):
 
 
 my_hello(world="HHH", hello="WWWW")
+
+
+# collection in the middle, must called by name
+
+def in_the_middle(x, *y, z):
+    print(x, y, z)
+
+
+in_the_middle("Test", 1, 2, 3, 4, 5, z="testz")
