@@ -103,4 +103,22 @@ hello_4('Mars', 'Howdy')
 hello_4('Mars', 'Howdy', '...')
 hello_4('Mars', punctuation='.')
 hello_4('Mars', greeting='Top of the morning to ya')
-hello_4()
+
+
+# collection params
+
+def print_params(*params):
+    print(params)
+
+
+print_params('Testing')
+
+print_params(1, 2, 3)
+
+
+# names
+def my_hello(hello, world):
+    print(hello, world)
+
+
+my_hello(world="HHH", hello="WWWW")
