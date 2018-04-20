@@ -91,3 +91,11 @@ def hello(name="Hello", value="world"):
 
 
 hello("Hello", "World")
+
+
+# optional
+def hello_4(name, greeting='Hello', punctuation='!'):
+    print('{}, {}{}'.format(greeting, name, punctuation))
+
+
+hello_4('Mars')
