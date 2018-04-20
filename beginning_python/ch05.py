@@ -72,3 +72,15 @@ x = [1, 2, 3]
 y = x
 y[0] = 100
 print(x)
+
+# is operator and ==
+names = ["James", "Jack"]
+n = names
+print(n is names, n == names, n)
+
+# now change n
+n[0] = "Ray"
+print(n is names, n == names, n)
+
+x = names[:]
+print(x is names, x == names, x)
