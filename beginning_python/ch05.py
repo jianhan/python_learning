@@ -34,3 +34,12 @@ else:
 
 # comperhension
 print([x * x for x in range(10)])
+
+# division
+print(x * x for x in range(10) if x % 3 == 0)
+
+result = []
+for x in range(3):
+    for y in range(3):
+        result.append((x, y))
+print(result)
