@@ -21,3 +21,16 @@ ages = [12, 45, 32, 102]
 
 for name, age in zip(names, ages):
     print(name, 'is', age, 'years old')
+
+from math import sqrt
+
+for n in range(99, 81, -1):
+    root = sqrt(n)
+    if root == int(root):
+        print(n)
+    break
+else:
+    print("Didn't find it!")
+
+# comperhension
+print([x * x for x in range(10)])
