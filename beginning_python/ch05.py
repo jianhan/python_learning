@@ -139,3 +139,21 @@ def return_dictionary(**params):
 
 # must pass key value like following
 return_dictionary(x=1, y=2, z=3)
+
+
+# mix and match
+def print_params_4(x, y, z=3, *pospar, **keypar):
+    print(x, y, z)
+    print(pospar)
+    print(keypar)
+
+
+print_params_4(1, 2, 3, 5, 6, 7, foo=1, bar=2)
+
+
+def hello_3(greeting='Hello', name='world'):
+    print('{}, {}!'.format(greeting, name))
+
+
+params = {'name': 'Sir Robin', 'greeting': 'Well met'}
+hello_3(**params)
