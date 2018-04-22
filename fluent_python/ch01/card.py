@@ -29,3 +29,4 @@ print(choice(deck))
 
 for card in deck:
     print(card)
+print(Card('Q', 'hearts') in deck, Card('7', 'beasts') in deck)
