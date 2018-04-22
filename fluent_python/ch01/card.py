@@ -1,4 +1,5 @@
 import collections
+from random import choice
 
 Card = collections.namedtuple('Card', ['rank', 'suit'])
 
@@ -23,3 +24,8 @@ print(len(deck))
 
 beer_card = Card('7', 'diamonds')
 print(beer_card)
+
+print(choice(deck))
+
+for card in deck:
+    print(card)
