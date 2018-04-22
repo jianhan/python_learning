@@ -20,3 +20,6 @@ class FrenchDeck:
 
 deck = FrenchDeck()
 print(len(deck))
+
+beer_card = Card('7', 'diamonds')
+print(beer_card)
