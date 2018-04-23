@@ -23,3 +23,10 @@ class Vector:
 
     def __mul__(self, scalar):
         return Vector(self.x * scalar, self.y * scalar)
+
+
+# list comp
+
+str = "this is a simple string"
+ascii = [ord(s) for s in str]
+print(ascii)
