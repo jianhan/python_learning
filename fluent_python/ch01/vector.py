@@ -30,3 +30,6 @@ class Vector:
 str = "this is a simple string"
 ascii = [ord(s) for s in str]
 print(ascii)
+
+ascii = list(filter(lambda c: c > 50, map(ord, str)))
+print(ascii)
