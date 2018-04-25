@@ -48,3 +48,18 @@ LatLong = namedtuple('LatLong', 'lat long')
 delhi_data = ('Delhi NCR', 'IN', 21.935, LatLong(28.613889, 77.208889))
 delhi = City._make(delhi_data)
 print(delhi._asdict())
+
+# list assignment
+l = list(range(10))
+print(l)
+l[2:5] = [2000]
+print(l)
+del l[6:]
+print(l)
+l[3::2] = [11, 22]
+print(l)
+
+# build list
+board = [['_'] * 3 for i in range(3)]
+board[1][2] = "X"
+print(board)
