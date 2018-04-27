@@ -25,3 +25,30 @@ m = np.array([[1, 5, 2],
 eigen_vals, eigen_vecs = np.linalg.eig(m)
 print('Eigen Values:', eigen_vals, '\n')
 print('Eigen Vectors:\n', eigen_vecs)
+
+# SVD
+
+m = np.array([[1, 5, 2],
+              [4, 7, 4],
+              [2, 0, 9]])
+U, S, VT = np.linalg.svd(m)
+print('Getting SVD outputs:-\n')
+print('U:\n', U, '\n')
+print('S:\n', S, '\n')
+print('VT:\n', VT, '\n')
+
+# In [74]: # descriptive statistics
+import scipy as sp
+import numpy as np
+
+# get data
+nums = np.random.randint(1, 20, size=(1, 15))[0]
+print('Data: ', nums)
+# get descriptive stats
+print('Mean:', sp.mean(nums))
+print('Median:', sp.median(nums))
+print('Mode:', sp.stats.mode(nums))
+print('Standard Deviation:', sp.std(nums))
+print('Variance:', sp.var(nums))
+print('Skew:', sp.stats.skew(nums))
+print('Kurtosis:', sp.stats.kurtosis(nums))
