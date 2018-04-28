@@ -107,4 +107,4 @@ print(prediction_features)
 predictions = model.predict(prediction_features)
 ## display results
 new_data['Recommend'] = predictions
-new_data
+print(new_data)
