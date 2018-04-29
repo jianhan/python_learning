@@ -28,5 +28,11 @@ city_data[city_data > 0] = 0
 print(city_data)
 
 # modf
+# The function modf will return the fractional and the integer part of the input supplied to it
 arr1 = np.random.randn(5, 3)
 print(np.modf(arr1))
+
+# Linear Algebra Using numpy
+A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
+B = np.array([[9, 8, 7], [6, 5, 4], [1, 2, 3]])
+print(A.dot(B))
