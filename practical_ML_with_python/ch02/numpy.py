@@ -73,3 +73,6 @@ city_data.head(n=10)
 print(city_data, city_data.tail())
 series_es = city_data.lat
 print(type(series_es), series_es, series_es[1:10:2], len(series_es))
+
+# pick row and column
+print(city_data.iloc[:5, :4])
