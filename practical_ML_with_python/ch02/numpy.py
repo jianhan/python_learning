@@ -57,3 +57,12 @@ print(x)
 
 # We can also check if the solution is correct using the np.allclose function.
 print(np.allclose(np.dot(a, x), b))
+
+# pandas
+import pandas as pd
+
+d = [{'city': 'Delhi', "data": 1000},
+     {'city': 'Bangalore', "data": 2000},
+     {'city': 'Mumbai', "data": 1000}]
+df = pd.DataFrame(d).head(2)
+print(df.tail())
