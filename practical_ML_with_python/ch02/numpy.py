@@ -66,3 +66,10 @@ d = [{'city': 'Delhi', "data": 1000},
      {'city': 'Mumbai', "data": 1000}]
 df = pd.DataFrame(d).head(2)
 print(df.tail())
+
+# read CSV
+city_data = pd.read_csv(filepath_or_buffer='simplemaps-worldcities-basic.csv')
+city_data.head(n=10)
+print(city_data, city_data.tail())
+series_es = city_data.lat
+print(type(series_es), series_es, series_es[1:10:2], len(series_es))
