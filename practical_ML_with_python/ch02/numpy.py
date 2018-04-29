@@ -9,3 +9,10 @@ print(arr, arr.shape, arr.dtype, arr2.dtype)
 
 arr = np.random.randn(3, 4)
 print(arr)
+
+# advance index
+arr = np.arange(9).reshape(3, 3)
+# In this example we have provided an array in which the first part identifies the rows we want to access
+# and the second identifies the columns which we want to address. This is quite similar to providing a
+# collective element-wise address.
+print(arr[[0, 1, 2], [1, 0, 0]])
