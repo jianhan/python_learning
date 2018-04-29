@@ -76,3 +76,8 @@ print(type(series_es), series_es, series_es[1:10:2], len(series_es))
 
 # pick row and column
 print(city_data.iloc[:5, :4])
+
+# want to select cities that have population of more than 10
+# million and select columns that start with the letter l:
+print("***",
+      city_data[city_data['pop'] > 10000000][city_data.columns[pd.Series(city_data.columns).str.startswith('l')]])
