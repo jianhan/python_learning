@@ -101,3 +101,11 @@ print("**", city_data[columns_numeric].sum(axis=1))
 # Pandas also provides us with another very handy function called describe. This function will calculate
 # the most important statistics for numerical data in one go so that we don’t have to use individual functions.
 print(city_data[columns_numeric].describe())
+
+# The simplest scenario of concatenating is when we have more than one fragment of the same dataframe
+# (which may happen if you are reading it from a stream or in chunks). In that case, we can just supply the
+# constituent dataframes to the concat function as follows.
+city_data1 = city_data.sample(3)
+city_data2 = city_data.sample(3)
+city_data_combine = pd.concat([city_data1, city_data2])
+print(city_data_combine)
