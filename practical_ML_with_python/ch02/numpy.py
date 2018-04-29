@@ -36,3 +36,8 @@ print(np.modf(arr1))
 A = np.array([[1, 2, 3], [4, 5, 6], [7, 8, 9]])
 B = np.array([[9, 8, 7], [6, 5, 4], [1, 2, 3]])
 print(A.dot(B))
+
+# T operator
+
+A = np.arange(15).reshape(3, 5)
+print("***", A, A.T)
