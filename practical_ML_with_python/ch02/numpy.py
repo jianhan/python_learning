@@ -22,3 +22,7 @@ print(arr[[0, 1, 2], [1, 0, 0]])
 cities = np.array(["delhi", "bangalore", "mumbai", "chennai", "bhopal"])
 city_data = np.random.randn(5, 3)
 print(city_data[cities == "delhi"], "***", city_data[city_data > 0])
+
+# sub example
+city_data[city_data > 0] = 0
+print(city_data)
