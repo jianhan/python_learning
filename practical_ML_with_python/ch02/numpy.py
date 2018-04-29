@@ -26,3 +26,7 @@ print(city_data[cities == "delhi"], "***", city_data[city_data > 0])
 # sub example
 city_data[city_data > 0] = 0
 print(city_data)
+
+# modf
+arr1 = np.random.randn(5, 3)
+print(np.modf(arr1))
