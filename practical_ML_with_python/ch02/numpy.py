@@ -41,3 +41,19 @@ print(A.dot(B))
 
 A = np.arange(15).reshape(3, 5)
 print("***", A, A.T)
+
+#  decomposition of a matrix
+print(np.linalg.svd(A))
+
+# Linear algebra is often also used to solve a system of equations.
+# x + 5y -3z = 16
+# 3x - 5y + 2z = -8
+# 5x + 3y - 7z = 0
+
+a = np.array([[7, 5, -3], [3, -5, 2], [5, 3, -7]])
+b = np.array([16, -8, 0])
+x = np.linalg.solve(a, b)
+print(x)
+
+# We can also check if the solution is correct using the np.allclose function.
+print(np.allclose(np.dot(a, x), b))
