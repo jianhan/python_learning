@@ -81,3 +81,23 @@ print(city_data.iloc[:5, :4])
 # million and select columns that start with the letter l:
 print("***",
       city_data[city_data['pop'] > 10000000][city_data.columns[pd.Series(city_data.columns).str.startswith('l')]])
+
+# Value attribute
+df = pd.DataFrame(np.random.randn(8, 3), columns=['A', 'B', 'C'])
+print(df, df.values)
+
+# Descriptive Statistics Functions
+# A general practice of dealing with datasets is to know as much about them as possible. Descriptive statistics
+# of a dataframe give data scientists a comprehensive look into important information about any attributes
+# and features in the dataset.
+columns_numeric = ['lat', 'lng', 'pop']
+print(city_data[columns_numeric].mean(), city_data[columns_numeric].sum(), city_data[columns_numeric].count(),
+      city_data[columns_numeric].median(), city_data[columns_numeric].quantile(0.8))
+
+# All these operations were applied to each of the columns, the default behavior. We can also get all these
+# statistics for each row by using a different axis. This will give us the calculated statistics for each row in the dataframe.
+print("**", city_data[columns_numeric].sum(axis=1))
+
+# Pandas also provides us with another very handy function called describe. This function will calculate
+# the most important statistics for numerical data in one go so that we don’t have to use individual functions.
+print(city_data[columns_numeric].describe())
