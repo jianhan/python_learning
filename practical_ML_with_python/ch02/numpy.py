@@ -109,3 +109,27 @@ city_data1 = city_data.sample(3)
 city_data2 = city_data.sample(3)
 city_data_combine = pd.concat([city_data1, city_data2])
 print(city_data_combine)
+
+# Another common scenario of concatenating is when we have information about the columns of same
+# dataframe split across different dataframes
+
+df1 = pd.DataFrame({'col1': ['col10', 'col11', 'col12', 'col13'],
+                    'col2': ['col20', 'col21', 'col22', 'col23'],
+                    'col3': ['col30', 'col31', 'col32', 'col33'],
+                    'col4': ['col40', 'col41', 'col42', 'col43']},
+                   index=[0, 1, 2, 3])
+print(df1)
+
+df4 = pd.DataFrame({'col2': ['col22', 'col23', 'col26', 'col27'],
+                    'Col4': ['Col42', 'Col43', 'Col46', 'Col47'],
+                    'col6': ['col62', 'col63', 'col66', 'col67']},
+                   index=[2, 3, 6, 7])
+print(df4, pd.concat([df1, df4], axis=1))
+
+# Database Style Concatenations Using the merge Command
+# The most familiar way to concatenate data (for those acquainted with relational databases) is using the
+# join operation provided by the databases.
+
+country_data = city_data[['iso3', 'country']].drop_duplicates()
+del (city_data['country'])
+print(city_data.merge(country_data, 'inner').head())
