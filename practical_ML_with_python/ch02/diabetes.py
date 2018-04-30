@@ -25,11 +25,27 @@ from sklearn import datasets
 from sklearn.model_selection import GridSearchCV
 
 diabetes = datasets.load_diabetes()
+
+# We will split our data into separate test and train sets of data (train is used to train the model and
+# test is used for model performance testing and evaluation).
 X_train = diabetes.data[:310]
 y_train = diabetes.target[:310]
 X_test = diabetes.data[310:]
 y_test = diabetes.data[310:]
+
+# Then we will define the model we want to use and the parameter space for one of the model’s
+# hyperparameters. Here we will search the parameter alpha of the Lasso model. This parameter basically
+# controls the strictness our regularization.
 lasso = Lasso(random_state=0)
 alphas = np.logspace(-4, -0.5, 30)
 estimator = GridSearchCV(lasso, dict(alpha=alphas))
 print(estimator.fit(X_train, y_train))
+
+# This will take our train set and learn a group of Lasso models by varying the value of the alpha
+# hyperparameter. The GridSearchCV object will also score the models that we are learning and we can us the
+# best_estimator_ attribute to identify the model and the optimal value of the hyperparameter that gave us
+# the best score. Also we can directly use the same object for predicting with the best model on unknown data.
+
+print(estimator.best_score_, estimator.best_estimator_)
+
+print(estimator.predict(X_test))
