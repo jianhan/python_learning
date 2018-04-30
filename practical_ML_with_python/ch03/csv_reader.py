@@ -18,3 +18,8 @@ print("Number of rows::", df.shape[0])
 print("Number of columns::", df.shape[1])
 print("Column Names::", df.columns.values.tolist())
 print("Column Data Types::\n", df.dtypes)
+
+# identify missing values
+print("Columns with Missing Values::", df.columns[df.isnull().any()].tolist())
+print("Number of rows with Missing Values::", len(pd.isnull(df).any(1).nonzero()[0].tolist()))
+print("Sample Indices with missing data::", pd.isnull(df).any(1).nonzero()[0].tolist()[0:5])
