@@ -9,3 +9,21 @@
 
 tt = (1, 2, (30, 40))
 print(hash(tt))
+
+tl = (1, 2, [30, 40])
+# Following will print error can not be hashed
+# print(hash(tl))
+
+tf = (1, 2, frozenset([30, 40]))
+print(hash(tf))
+
+# Given these ground rules, you can build dictionaries in several ways. The Built-in
+# Types page in the Library Reference has this example to show the various means of
+# building a dict:
+
+a = dict(one=1, two=2, three=3)
+b = {'one': 1, 'two': 2, 'three': 3}
+c = dict(zip(['one', 'two', 'three'], [1, 2, 3]))
+d = dict([('two', 2), ('one', 1), ('three', 3)])
+e = dict({'three': 3, 'one': 1, 'two': 2})
+print(a == b == c == d == e)
