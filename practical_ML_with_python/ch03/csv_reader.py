@@ -67,10 +67,16 @@ print(df.select_dtypes(include=['float64']).values[:, 0])
 # requirements to horizontally splitting a dataframe as well. To work with a subset of rows, pandas provides
 # ways as outlined in the following snippet.
 print("Select Specific row indices::")
-print(df.iloc[[10, 501, 20]])
+print(df.iloc[[10, 100, 20]])
 print("Excluding Specific Row indices::")
 print(df.drop([0, 24, 51], axis=0).head())
 print("Subsetting based on logical condition(s)::")
-print(df[df.quantity_purchased > 25].head())
+print(df[df.HTAG > 0].head())
 print("Subsetting based on offset from top (bottom)::")
 print(df[100:].head())
+
+# Typecasting
+# Typecasting or converting data into appropriate data types, is an important part of cleanup and wrangling in
+# general
+df["Date"] = pd.to_datetime(df.Date)
+print("To Date time", df.head())
