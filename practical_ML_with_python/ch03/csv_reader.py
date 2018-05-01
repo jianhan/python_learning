@@ -23,3 +23,31 @@ print("Column Data Types::\n", df.dtypes)
 print("Columns with Missing Values::", df.columns[df.isnull().any()].tolist())
 print("Number of rows with Missing Values::", len(pd.isnull(df).any(1).nonzero()[0].tolist()))
 print("Sample Indices with missing data::", pd.isnull(df).any(1).nonzero()[0].tolist()[0:5])
+
+# summary
+print("General Stats::")
+print(df.info())
+print("Summary Stats::")
+print(df.describe())
+
+
+def cleanup_column_names(df, rename_dict={}, do_inplace=True):
+    """This function renames columns of a pandas dataframe
+    It converts column names to snake case if rename_dict is not passed.
+    Args:
+    rename_dict (dict): keys represent old column names and values point to
+    newer ones
+    do_inplace (bool): flag to update existing dataframe or return a new one
+    Returns:
+    pandas dataframe if do_inplace is set to False, None otherwise
+    """
+    if not rename_dict:
+        return df.rename(columns={col: col.lower().replace(' ', '_')
+                                  for col in df.columns.values.tolist()},
+                         inplace=do_inplace)
+    else:
+        return df.rename(columns=rename_dict, inplace=do_inplace)
+
+
+cleanup_column_names(df, {"Div": "Division"})
+print("RENAMED", df)
