@@ -87,3 +87,6 @@ import numpy as np
 type_map = {'H': 0, 'D': 1, 'A': 2, np.NAN: -1}
 df['ENCODED_HTR'] = df.HTR.map(type_map)
 print("HEAD *******", df.head())
+
+# using get_dummies to one hot encode
+print(pd.get_dummies(df, columns=['HTR']).head())
