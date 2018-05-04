@@ -80,3 +80,10 @@ print(df[100:].head())
 # general
 df["Date"] = pd.to_datetime(df.Date)
 print("To Date time", df.head())
+
+import numpy as np
+
+# using map to dummy encode
+type_map = {'H': 0, 'D': 1, 'A': 2, np.NAN: -1}
+df['ENCODED_HTR'] = df.HTR.map(type_map)
+print("HEAD *******", df.head())
