@@ -1,5 +1,7 @@
 import csv
 
+from sklearn import preprocessing
+
 csv_reader = csv.reader(open("E0.csv", "rt"), delimiter=",")
 csv_rows = list()
 csv_attr_dict = dict()
@@ -90,3 +92,10 @@ print("HEAD *******", df.head())
 
 # using get_dummies to one hot encode
 print(pd.get_dummies(df, columns=['HTR']).head())
+
+# normalized values
+df_normalized = df.dropna().copy()
+min_max_scaler = preprocessing.MinMaxScaler()
+np_scaled = min_max_scaler.fit_transform(df_normalized['FTAG'].reshape(-1, 1))
+df_normalized['normalized_ftag'] = np_scaled.reshape(-1, 1)
+print(df)
